@@ -103,6 +103,7 @@ int main(void) {
     int left_points = 0;
     int right_points = 0;
 
+    print_board(ball_x, ball_y, left_top, right_top, left_points, right_points);
     while (left_points < SCORE_LIMIT && right_points < SCORE_LIMIT) {
         int command = read_command();
         left_top = shift_racket(left_top, command, 'a', 'z');

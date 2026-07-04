@@ -99,6 +99,8 @@ int main(void) {
     noecho();
     curs_set(0);
     timeout(0);
+    paint_board(ball_x, ball_y, left_top, right_top, left_points, right_points);
+    napms(TICK_TIME);
     while (left_points < SCORE_LIMIT && right_points < SCORE_LIMIT) {
         int command = getch();
         left_top = shift_racket(left_top, command, 'a', 'z');
